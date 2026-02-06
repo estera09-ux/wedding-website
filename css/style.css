@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  text-align: center;
+  background: #fffaf7;
+  color: #333;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #f8d7da, #fffaf7);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+}
+
+.hero h2 {
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: #c97c7c;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #a85e5e;
+}
+
+/* COUNTDOWN */
+.countdown {
+  margin: 25px auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 20px;
+}
+
+.event {
+  background: white;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* RSVP FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  margin: auto;
+}
+
+input,
+select {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  padding: 20px;
+  background: #f3e1e1;
+}

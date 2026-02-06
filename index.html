@@ -6,9 +6,81 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <h1>Emma & Liam</h1>
+    <p>We’re getting married!</p>
+    <h2>June 15, 2026 • New York</h2>
+
+    <div id="countdown" class="countdown"></div>
+
+    <a href="#rsvp" class="btn">RSVP Now</a>
+  </header>
+
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <h2>Our Story</h2>
+    <p>
+      We met, we laughed, we fell in love — and now we can’t wait to celebrate
+      our big day with you.
+    </p>
+  </section>
+
+
+  <!-- SCHEDULE SECTION -->
+  <section class="schedule">
+    <h2>Wedding Schedule</h2>
+
+    <div class="event">
+      <h3>Ceremony</h3>
+      <p>3:00 PM • Central Park</p>
+    </div>
+
+    <div class="event">
+      <h3>Reception</h3>
+      <p>6:00 PM • The Plaza Hotel</p>
+    </div>
+  </section>
+
+
+  <!-- RSVP SECTION -->
+  <section id="rsvp" class="rsvp">
+    <h2>RSVP</h2>
+
+    <form id="rsvpForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+
+      <select id="guests" required>
+        <option value="">Number of Guests</option>
+        <option value="1">1 Guest</option>
+        <option value="2">2 Guests</option>
+        <option value="3">3 Guests</option>
+      </select>
+
+      <button type="submit" class="btn">Submit RSVP</button>
+    </form>
+
+    <p id="message"></p>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Emma & Liam Wedding</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
 
 </body>
 
