@@ -2,60 +2,97 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Emma & Liam | Wedding Website</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
-  <!-- HERO SECTION -->
+  <!-- ================= HERO SECTION ================= -->
   <header class="hero">
-    <h1>Emma & Liam</h1>
-    <p>We’re getting married!</p>
-    <h2>June 15, 2026 • New York</h2>
+    <div class="hero-overlay">
 
-    <div id="countdown" class="countdown"></div>
+      <h1 class="couple-name">Emma & Liam</h1>
+      <p class="hero-subtitle">We’re getting married!</p>
 
-    <a href="#rsvp" class="btn">RSVP Now</a>
+      <h2 class="hero-date">
+        June 15, 2026 • New York City
+      </h2>
+
+      <!-- ✅ Countdown -->
+      <div id="countdown" class="countdown"></div>
+
+      <a href="#rsvp" class="btn">RSVP Now</a>
+    </div>
   </header>
 
-
-  <!-- ABOUT SECTION -->
-  <section class="about">
-    <h2>Our Story</h2>
-    <p>
+  <!-- ================= ABOUT SECTION ================= -->
+  <section class="about section">
+    <h2 class="section-title">Our Story</h2>
+    <p class="section-text">
       We met, we laughed, we fell in love — and now we can’t wait to celebrate
       our big day with you.
     </p>
   </section>
 
+  <!-- ================= GALLERY SECTION ================= -->
+  <section class="section alt">
+    <h2 class="section-title">Moments Together</h2>
 
-  <!-- SCHEDULE SECTION -->
-  <section class="schedule">
-    <h2>Wedding Schedule</h2>
+    <div class="gallery">
+      <!-- Photo 1 -->
+      <img
+        src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+        alt="Couple holding hands" />
 
-    <div class="event">
-      <h3>Ceremony</h3>
-      <p>3:00 PM • Central Park</p>
-    </div>
+      <!-- Photo 2 -->
+      <img
+        src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+        alt="Romantic wedding moment" />
 
-    <div class="event">
-      <h3>Reception</h3>
-      <p>6:00 PM • The Plaza Hotel</p>
+      <!-- Photo 3 (NEW WORKING ONE) -->
+      <img
+        src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+        alt="Wedding celebration" />
     </div>
   </section>
 
 
-  <!-- RSVP SECTION -->
-  <section id="rsvp" class="rsvp">
-    <h2>RSVP</h2>
 
-    <form id="rsvpForm">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
+  <!-- ================= SCHEDULE SECTION ================= -->
+  <section class="schedule section alt">
+    <h2 class="section-title">Wedding Schedule</h2>
+
+    <div class="schedule-grid">
+      <div class="event-card">
+        <h3>Ceremony</h3>
+        <p>3:00 PM • Central Park</p>
+      </div>
+
+      <div class="event-card">
+        <h3>Reception</h3>
+        <p>6:00 PM • The Plaza Hotel</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RSVP SECTION ================= -->
+  <section id="rsvp" class="rsvp section">
+    <h2 class="section-title">RSVP</h2>
+
+    <p class="section-text">
+      Please let us know if you can join us by <strong>May 20, 2026</strong>.
+    </p>
+
+    <form id="rsvpForm" class="rsvp-form">
+
+      <input type="text" id="name" placeholder="Your Full Name" required />
+
+      <input type="email" id="email" placeholder="Your Email Address" required />
 
       <select id="guests" required>
         <option value="">Number of Guests</option>
@@ -64,23 +101,33 @@
         <option value="3">3 Guests</option>
       </select>
 
-      <button type="submit" class="btn">Submit RSVP</button>
+      <select id="meal" required>
+        <option value="">Meal Preference</option>
+        <option value="Chicken">Chicken</option>
+        <option value="Beef">Beef</option>
+        <option value="Vegetarian">Vegetarian</option>
+        <option value="Vegan">Vegan</option>
+      </select>
+
+      <input type="text" id="notes" placeholder="Allergies or special requests (optional)" />
+
+      <button type="submit" class="btn">
+        Submit RSVP
+      </button>
+
     </form>
 
-    <p id="message"></p>
+    <!-- ✅ Only ONE message -->
+    <p id="message" class="form-message"></p>
   </section>
 
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Emma & Liam Wedding</p>
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <p>© 2026 Emma & Liam Wedding • Made with ❤️</p>
   </footer>
 
-
-  <script src="script.js"></script>
-</body>
-
-</html>
+  <!-- ✅ Correct Script -->
+  <script src="/js/app.js"></script>
 
 </body>
 
