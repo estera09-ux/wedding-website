@@ -1,8 +1,9 @@
 /*******************************
- 💍 PREMIUM COUNTDOWN TIMER
+ 💍 PREMIUM COUNTDOWN TIMER (UK)
 ********************************/
 
-const weddingDate = new Date("June 15, 2026 15:00:00").getTime();
+// ✅ UK Timezone Safe Date (London Summer Time)
+const weddingDate = new Date("2026-06-15T15:00:00+01:00").getTime();
 const countdownElement = document.getElementById("countdown");
 
 setInterval(() => {
@@ -56,7 +57,26 @@ setInterval(() => {
 
 
 /*******************************
- 📩 RSVP FORM SUBMISSION
+ ✨ VENUE BUTTON HIGHLIGHT
+********************************/
+
+const venueBtn = document.querySelector(".venue-btn");
+
+if (venueBtn) {
+  venueBtn.addEventListener("click", () => {
+    document.getElementById("venue").classList.add("highlight");
+
+    setTimeout(() => {
+      document.getElementById("venue").classList.remove("highlight");
+    }, 1500);
+  });
+}
+
+
+
+
+/*******************************
+ 📩 RSVP FORM SUBMISSION (Google Sheets)
 ********************************/
 
 const form = document.getElementById("rsvpForm");
@@ -65,34 +85,27 @@ const message = document.getElementById("message");
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbzZYnG9iJUbU8Yu5fsXkMwKO9F-h9xt5Q-fW9M8x5PKV1dyVz6X1A6lmaeqYuY8fVw3/exec";
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  const formData = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    guests: document.getElementById("guests").value,
-    meal: document.getElementById("meal").value,
-    notes: document.getElementById("notes").value,
-  };
+    message.innerText = "Sending RSVP...";
 
-  message.innerText = "Sending RSVP...";
+    // ✅ Best method for Google Apps Script
+    const formData = new FormData(form);
 
-  try {
-    await fetch(scriptURL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      await fetch(scriptURL, {
+        method: "POST",
+        body: formData,
+      });
 
-    message.innerText = "RSVP submitted successfully 💕";
-    form.reset();
-  } catch (error) {
-    console.error("Error:", error);
-    message.innerText =
-      "Oops! Something went wrong. Please try again.";
-  }
-});
+      message.innerText = "RSVP submitted successfully 💕";
+      form.reset();
+    } catch (error) {
+      console.error("Error:", error);
+      message.innerText =
+        "Oops! Something went wrong. Please try again.";
+    }
+  });
+}

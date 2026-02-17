@@ -263,3 +263,41 @@ h3 {
   text-align: center;
   font-size: 0.95rem;
 }
+
+/* ===============================
+   VENUE SECTION
+================================ */
+
+.venue {
+  text-align: center;
+}
+
+.venue-text {
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.map-container {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.map-container iframe {
+  border-radius: 18px;
+}
+
+/* Venue Button */
+.venue-btn {
+  margin-top: 30px;
+}
+
+/* Premium Highlight Effect */
+.highlight {
+  box-shadow: 0 0 25px rgba(217, 140, 167, 0.6);
+  transition: 0.4s;
+}
