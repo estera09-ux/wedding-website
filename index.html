@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -13,25 +14,29 @@
 <body>
 
   <!-- ================= HERO SECTION ================= -->
+
   <header class="hero">
     <div class="hero-overlay">
 
+      ```
       <h1 class="couple-name">Emma & Liam</h1>
       <p class="hero-subtitle">We’re getting married!</p>
 
-      <!-- ✅ Updated Location -->
       <h2 class="hero-date">
         June 15, 2026 • London, United Kingdom
       </h2>
 
-      <!-- ✅ Countdown -->
+      <!-- Countdown -->
       <div id="countdown" class="countdown"></div>
 
-      <a href="#rsvp" class="btn">RSVP Now</a>
+      <a href="#venue" class="btn">View Venue</a>
     </div>
+    ```
+
   </header>
 
   <!-- ================= ABOUT SECTION ================= -->
+
   <section class="about section">
     <h2 class="section-title">Our Story</h2>
     <p class="section-text">
@@ -41,9 +46,11 @@
   </section>
 
   <!-- ================= GALLERY SECTION ================= -->
+
   <section class="section alt">
     <h2 class="section-title">Moments Together</h2>
 
+    ```
     <div class="gallery">
       <img src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?auto=format&fit=crop&w=600&q=80"
         alt="Couple holding hands" />
@@ -54,12 +61,16 @@
       <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80"
         alt="Wedding celebration" />
     </div>
+    ```
+
   </section>
 
   <!-- ================= SCHEDULE SECTION ================= -->
+
   <section class="schedule section alt">
     <h2 class="section-title">Wedding Schedule</h2>
 
+    ```
     <div class="schedule-grid">
       <div class="event-card">
         <h3>Ceremony</h3>
@@ -71,76 +82,42 @@
         <p>6:00 PM • The Rosewood London</p>
       </div>
     </div>
+    ```
+
   </section>
 
   <!-- ================= VENUE SECTION ================= -->
+
   <section class="venue section alt" id="venue">
     <h2 class="section-title">Wedding Venue</h2>
 
+    ```
     <p class="venue-text">
       Join us at <strong>The Rosewood London</strong><br />
       252 High Holborn, London WC1V 7EN, United Kingdom
     </p>
 
-    <!-- ✅ Working UK Google Map -->
     <div class="map-container">
       <iframe src="https://www.google.com/maps?q=Rosewood+London&output=embed" width="100%" height="380"
         style="border:0;" allowfullscreen="" loading="lazy">
       </iframe>
     </div>
 
-    <!-- ✅ Button INSIDE section -->
     <a class="btn venue-btn" href="https://maps.google.com/?q=Rosewood+London" target="_blank">
       Open in Google Maps
     </a>
-  </section>
+    ```
 
-  <!-- ================= RSVP SECTION ================= -->
-  <section id="rsvp" class="rsvp section">
-    <h2 class="section-title">RSVP</h2>
-
-    <p class="section-text">
-      Please let us know if you can join us by <strong>May 20, 2026</strong>.
-    </p>
-
-    <form id="rsvpForm" class="rsvp-form">
-
-      <input type="text" name="name" id="name" placeholder="Your Full Name" required />
-
-      <input type="email" name="email" id="email" placeholder="Your Email Address" required />
-
-      <select name="guests" id="guests" required>
-        <option value="">Number of Guests</option>
-        <option value="1">1 Guest</option>
-        <option value="2">2 Guests</option>
-        <option value="3">3 Guests</option>
-      </select>
-
-      <select name="meal" id="meal" required>
-        <option value="">Meal Preference</option>
-        <option value="Chicken">Chicken</option>
-        <option value="Beef">Beef</option>
-        <option value="Vegetarian">Vegetarian</option>
-        <option value="Vegan">Vegan</option>
-      </select>
-
-      <input type="text" name="notes" id="notes" placeholder="Allergies or special requests (optional)" />
-
-      <button type="submit" class="btn">
-        Submit RSVP
-      </button>
-
-    </form>
-
-    <p id="message" class="form-message"></p>
   </section>
 
   <!-- ================= FOOTER ================= -->
+
   <footer class="footer">
     <p>© 2026 Emma & Liam Wedding • Made with ❤️</p>
   </footer>
 
   <!-- Script -->
+
   <script src="js/app.js"></script>
 
 </body>

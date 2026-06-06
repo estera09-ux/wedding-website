@@ -1,6 +1,4 @@
-/*******************************
- 💍 PREMIUM COUNTDOWN TIMER (UK)
-********************************/
+
 
 // ✅ UK Timezone Safe Date (London Summer Time)
 const weddingDate = new Date("2026-06-15T15:00:00+01:00").getTime();
@@ -56,9 +54,9 @@ setInterval(() => {
 
 
 
-/*******************************
- ✨ VENUE BUTTON HIGHLIGHT
-********************************/
+
+//  ✨ VENUE BUTTON HIGHLIGHT
+
 
 const venueBtn = document.querySelector(".venue-btn");
 
@@ -75,37 +73,6 @@ if (venueBtn) {
 
 
 
-/*******************************
- 📩 RSVP FORM SUBMISSION (Google Sheets)
-********************************/
 
-const form = document.getElementById("rsvpForm");
-const message = document.getElementById("message");
 
-const scriptURL =
-  "https://script.google.com/macros/s/AKfycbzZYnG9iJUbU8Yu5fsXkMwKO9F-h9xt5Q-fW9M8x5PKV1dyVz6X1A6lmaeqYuY8fVw3/exec";
 
-if (form) {
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    message.innerText = "Sending RSVP...";
-
-    // ✅ Best method for Google Apps Script
-    const formData = new FormData(form);
-
-    try {
-      await fetch(scriptURL, {
-        method: "POST",
-        body: formData,
-      });
-
-      message.innerText = "RSVP submitted successfully 💕";
-      form.reset();
-    } catch (error) {
-      console.error("Error:", error);
-      message.innerText =
-        "Oops! Something went wrong. Please try again.";
-    }
-  });
-}
